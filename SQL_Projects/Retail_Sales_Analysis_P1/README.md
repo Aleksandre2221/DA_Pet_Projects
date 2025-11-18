@@ -22,4 +22,8 @@ The analysis answers key business questions, including:
 - **Profitability:** Profit margins vary widely across categories, highlighting key strategic areas.  
 - **Demographics:** Beauty category buyers tend to be younger on average.
 
+## Resources
+- **Dataset:** [Retail_Sales_Dataset.csv](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Retail_Sales_Analysis_P1/Retail_Sales_Dataset.csv)
+- **SQL Queries:** [Retail_Sales_Queries.sql](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Retail_Sales_Analysis_P1/Retail_Sales_Queries.sql)
+
 
