@@ -1,6 +1,26 @@
 
+	-- All The Questions: 
+-- Q 1. Retrieve all columns for sales made on '2022-11-05
+-- Q 2. Retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022
+-- Q 3. Calculate the total sales (total_sale) for each category.
+-- Q 4. Find the average age of customers who purchased items from the 'Beauty' catgory.
+-- Q 5. Find all transactions where the total_sale is grater than 1000.
+-- Q 6. Find the total number of transactions (transaction_id) made by each gender in each category.
+-- Q 7. Calculate the average sale for each month. Find out best selling month in each year.
+-- Q 8. Find the top 5 customers based on the highest total sales.
+-- Q 9. Find the number of unique customers who purchased items from each category.
+-- Q 10. Create each shift and number of orders.
+-- Q 11. Find a day of the week with highest total sales.
+-- Q 12. Calculate total profit for each category.
+-- Q 13. Find the number of unique customers who purchased for at least 2 different categories.
+-- Q 14. Identify customers who spent more than the global average.
+-- Q 15. Calculate the number of transactions and the average of total sales per gender, for customers under 40 years.
+	
 
-          -- Data Cleaning
+
+
+
+          -- Data Cleaning -- 
 
 SELECT * FROM retail_sales
 WHERE transactions_id IS NULL;
@@ -28,16 +48,13 @@ WHERE
 
 
 
--- Data Exploration
-
+		-- Data Exploration -- 
 
 -- How many sales we have?
 SELECT COUNT(*) AS total_sale FROM retail_sales;
 
-
 -- How many unique customers we have?
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-
 
 -- Which categories we have?
 SELECT DISTINCT category FROM retail_sales;
@@ -48,8 +65,7 @@ SELECT DISTINCT category FROM retail_sales;
 
 
 
-          -- Data Analysis & Business Key Problems
-
+          -- Data Analysis & Business Key Problems -- 
 
 
 -- Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05:
