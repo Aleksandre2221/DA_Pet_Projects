@@ -1,0 +1,118 @@
+		
+	-- Calculated Columns Created in Power Query:
+
+1. FactOrders:
+	1. FactOrders[net_revenue] = [list_price] * [quantity] * (1 - [discount]) 
+	2. FactOrders[gross_revenue] = [list_price] * [quantity]
+
+2. DimOrders:
+	1. DimOrders[is_late] = IF(AND(ISBLANK([shipped_date]) = FALSE(), [shipped_date] > [required_date]), 1)
+	2. DImOrders[shipping_days] = IF(ISBLANK([shipped_date]) = FALSE(),  [shipped_date] - [order_date])
+
+3. DimCustomers: 
+	1. DimCustomers[customer_full_adddress] = [state] & ", " & [city] & ", " & [street] & ", " & [zip_code]
+
+4. DimDate:
+	1. Quarter = "Q" & "" &FORMAT([Date], "Q")
+	2. Quarter-Year = "Q" & "" &FORMAT([Date], "Q-YYYY")
+	3. Is Weekend = IF([Weekday Number] >  5, 1, 0)
+
+5. DimStaffs[manager_name] - Merge Queries (self-join)
+
+
+
+
+
+
+
+	-- Calculated Measures -- 
+
+1. Total Net Revenue:
+	=SUMX(FactOrders, [list_price] * [quantity] * (1 - [discount]))
+
+2. Total Quantity Sold:
+	=SUM('FactOrders'[quantity])
+
+3. AVG Discount:
+	=AVERAGE('FactOrders'[discount])
+
+4. Average Order Value:
+	=[Total Net Revenue] / DISTINCTCOUNT(DimOrders[order_id])
+
+5. Total Customers:
+	=DISTINCTCOUNT(FactOrders[customer_id])
+
+6. Total Products:
+	=DISTINCTCOUNT(FactOrders[product_id])
+
+7. AVG Sales per Store:
+	=[Total Net Revenue] / DISTINCTCOUNT(FactOrders[store_id])
+
+8. Total Orders:
+	=DISTINCTCOUNT(Factorders[order_id])
+
+9. MoM Sales Growth Rate:
+	=([Total Net Revenue] - [Total Net Revenue (Previous Month)]) / [Total Net Revenue (Previous Month)]
+
+10. AVG Shipping Days:
+	=CALCULATE(AVERAGE(DimOrders[shipping_days]), FactORders)
+
+11. Total Net Revenue (Previous Month):
+	=CALCULATE([Total Net Revenue], PREVIOUSMONTH(DimDate[Date])) 
+
+12. On-Time Delivery Rate:
+	=CALCULATE(DISTINCTCOUNT(FactOrders[order_id]), DimOrders[is_late] = 0) / DISTINCTCOUNT(FactOrders[order_id])
+
+13. Late Delivery Rate:
+	=CALCULATE(DISTINCTCOUNT(FactOrders[order_id]), DimOrders[is_late] = 1) / DISTINCTCOUNT(FactOrders[order_id])
+
+14. Completed Orders Rate:
+	=CALCULATE([Total Orders], DimOrders[order_status] = "Completed") / [Total Orders]
+
+15. Rejected Orders Rate:
+	=CALCULATE([Total Orders], DimOrders[order_status] = "Rejected") / [Total Orders]
+
+16. Total Orders (Completed):
+	=CALCULATE(COUNT(FactOrders[order_id]), DimOrders[order_status] = "Completed")
+
+17. AVG Revenue per Customer:
+	=[Total Net Revenue] / [Total Customers ]
+
+18. Total Rejected Orders:	
+	=CALCULATE([Total Orders], DimOrders[order_status] = "Rejected")
+
+19. YoY Sales Growth Rate:
+	=( [Total Net Revenue] - CALCULATE([Total Net Revenue], SAMEPERIODLASTYEAR(DimOrders[order_date]) ) ) / CALCULATE([Total Net Revenue], SAMEPERIODLASTYEAR(DimOrders[order_date]))
+
+20. Orders per Staff (Completed):=
+DIVIDE(
+    CALCULATE([Total Orders], DimOrders[order_status] = "Completed"),
+    DISTINCTCOUNT(FactOrders[staff_id])
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
