@@ -21,10 +21,10 @@ The dashboard provides insights such as:
 
 ## Screenshots
 
-- ### Dahsboard - Overview 
+- ### Dashboard - Overview 
 <img width="1444" height="803" alt="Screenshot 2025-11-19 184852" src="https://github.com/user-attachments/assets/c7da960a-00c6-46c5-88e8-e4c1fbe51677" />
 
-- ### Dahsboard - Staff-Performance
+- ### Dashboard - Staff-Performance
 <img width="1448" height="803" alt="Screenshot 2025-11-19 184924" src="https://github.com/user-attachments/assets/819783bb-9c58-4f14-8353-ad889832395a" />
 
 - ### Data Model   
