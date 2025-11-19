@@ -16,10 +16,10 @@ The dashboard provides insights such as:
 
 ## Screenshots
 
-### Main Dashboard  
+- ### Main Dashboard  
 <img width="1336" height="761" alt="Screenshot 2025-11-19 164441" src="https://github.com/user-attachments/assets/e326d686-2f6a-4367-90c5-d78695213999" />
 
-### Data Model (Power Pivot)  
+- ### Data Model (Power Pivot)  
 <img width="1881" height="810" alt="Screenshot 2025-10-15 154443" src="https://github.com/user-attachments/assets/1b31c9b9-9ecc-43c5-9056-a403104956de" />
 
 ---
@@ -37,4 +37,4 @@ The dashboard provides insights such as:
 ## Resources
 - **Dataset:** [Bike_Sales_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1/Bike_Sales_Dataset)
 - **Dashboard:** [Bike_Sales_Dashboard](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/Excel_Projects/Bike_Sales_P1/Bike_Sales_Dashboard.xlsx)
-- **Formulas:** [Bike_Sales_DAX_Formulas]()
+- **Formulas:** [Bike_Sales_DAX_Formulas](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/Excel_Projects/Bike_Sales_P1/Bike_Sales_Formulas.txt)
