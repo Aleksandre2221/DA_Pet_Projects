@@ -4,6 +4,9 @@
 This project focuses on performing SQL analysis on the **Bike Store Sample Dataset**.  
 The goal is to solve realistic medium‑difficulty analytical questions related to customers, orders, sales performance, products, stores, staff, and inventory.
 
+### ERD (Entity-Relationship Model)
+<img width="984" height="805" alt="Screenshot 2025-11-19 195729" src="https://github.com/user-attachments/assets/7e610702-816e-4ada-90cd-2cabc3ed1e16" />
+
 ## Case Study Questions
 The analysis answers the following 20 business questions:
 
