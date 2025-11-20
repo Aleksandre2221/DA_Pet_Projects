@@ -5,7 +5,7 @@ P.S. The project upload date on GitHub does not match the actual creation date. 
 
 ## Content 
 - **[SQL](#sql)**
-- **Excel**
+- **[Excel](#excel)**
 - **[PowerBI](#powerbi)**
 
 
