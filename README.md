@@ -25,11 +25,11 @@ P.S. The project upload date on GitHub does not match the actual creation date. 
 
 | Project&nbsp;Name | Dashboard Screenshot | Description |
 | :--- | :---: | :--- |
-| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1)** | <img width="1336" height="761" alt="Screenshot 2025-11-19 164441" src="https://github.com/user-attachments/assets/60a86786-5726-4f82-9d60-6e87c10f9b6b" /> | This project analyzes bike sales data using Excel, leveraging Power Query, Power Pivot, Pivot Tables, DAX, and interactive dashboards. The goal of the project is to explore sales performance, customer behavior, product profitability, inventory levels, and store performance. |
+| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1)** | <img width="1600" height="1200" alt="Screenshot 2025-11-19 164441" src="https://github.com/user-attachments/assets/60a86786-5726-4f82-9d60-6e87c10f9b6b" /> | This project analyzes bike sales data using Excel, leveraging Power Query, Power Pivot, Pivot Tables, DAX, and interactive dashboards. The goal of the project is to explore sales performance, customer behavior, product profitability, inventory levels, and store performance. |
 
 
 # PowerBI
 
 | Project&nbsp;Name | Dashboard Screenshot | Description |
 | :--- | :---: | :--- |
-| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/PowerBI_Projects/Bike_Sales_Analysis)** | <img width="1444" height="803" alt="Screenshot 2025-11-19 184852" src="https://github.com/user-attachments/assets/33f596f7-fcb2-440e-977e-950f21e7031d" /> | This project analyzes bike sales data using Power BI, leveraging Power Query, DAX, and interactive dashboards. The goal of the project is to explore sales performance, product trends, customer behavior, and employee contribution across all stores. |
+| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/PowerBI_Projects/Bike_Sales_Analysis)** | <img width="1600" height="1200" alt="Screenshot 2025-11-19 184852" src="https://github.com/user-attachments/assets/33f596f7-fcb2-440e-977e-950f21e7031d" /> | This project analyzes bike sales data using Power BI, leveraging Power Query, DAX, and interactive dashboards. The goal of the project is to explore sales performance, product trends, customer behavior, and employee contribution across all stores. |
