@@ -1,4 +1,4 @@
-# 🛒 Retail Sales SQL Analysis
+# 🛒 Retail Sales Analysis
 
 ## Description
 This project performs **data cleaning, exploration, and business-oriented SQL analysis** on a retail sales dataset.  
