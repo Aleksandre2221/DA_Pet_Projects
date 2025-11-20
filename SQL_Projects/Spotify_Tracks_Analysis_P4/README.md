@@ -33,5 +33,5 @@ The analysis answers key business questions, including:
 - **Cumulative Engagement:** Summing likes by views highlights tracks that consistently engage listeners.  
 
 ## Resources
-- **Dataset:** [Spotify_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Spotify_Analysis_P4/Spotify_Dataset.csv)
-- **SQL Queries:** [Spotify_Queries](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Spotify_Analysis_P4/Spotify_Queries.sql)
+- **Dataset:** [Spotify_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Spotify_Tracks_Analysis_P4/Spotify_Dataset.csv)
+- **SQL Queries:** [Spotify_Queries](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/SQL_Projects/Spotify_Tracks_Analysis_P4/Spotify_Queries.sql)
