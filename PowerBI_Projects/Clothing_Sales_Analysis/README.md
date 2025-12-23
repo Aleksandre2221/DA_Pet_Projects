@@ -7,8 +7,9 @@
 - [DAX Measures](#dax-measures)
 - [Key Insights](#key-insights)
 - **Resources / Files:**
-  - **Dataset:** [Bike_Sales_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/PowerBI_Projects/Bike_Sales_Analysis/Bike_Sales_Dataset)
-  - **Dashboard:** [Bike_Sales_Dashboard](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Bike_Sales_Analysis/Bikes_Sales_Dashboard.pbix)
+  - **Dataset:** [Clothing_Sales_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Dataset/clothing_sales.csv)
+  - **Dashboard:** [Clothing_Sales_Dashboard](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Clothing_Sales_Dashboard.pbix)
+  - **DAX Measures:** [Clothing_Sales_DAX](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Clothing_Sales_DAX.txt)
   
 ## Description
 This project presents an **interactive Power BI dashboard** designed to analyze **sales performance, customer behavior, and operational efficiency** across multiple stores.
@@ -21,8 +22,8 @@ The dashboard enables stakeholders to:
 
 The Power BI report consists of three pages:
 - Overview — overall sales, customer, categories and store performance
-- Products — detailed product sales analysis: Top products by gross revenue, categgory / subcategory / brand sales analysis
-- Stores — advanced store performance analysis  
+- Products — detailed product sales analysis: Top products by gross revenue, category, subcategory and brand performance 
+- Stores — advanced store-level performance analysis  
 
 The dashboard provides insights such as:
 - Total revenue and profit analysis
@@ -65,7 +66,7 @@ The dashboard provides insights such as:
 
 ---  
 ### Discount Impact
-- Discounts have a **measurable negative impact on revenue** in some stores, while others maintain revenue levels despite higher discount rates. This indicates opportunities to **optimize promotional strategies on a store-by-store basis**.
+- Higher discount levels are often associated with higher gross revenue, suggesting that discounts help drive sales volume.
 
 ---
 
