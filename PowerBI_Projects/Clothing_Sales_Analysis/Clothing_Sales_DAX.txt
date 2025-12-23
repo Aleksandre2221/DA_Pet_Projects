@@ -1,0 +1,234 @@
+
+	Calculated Columns: 
+
+1. Created column - order_id - in FactOrders table:
+order_id = 
+RANKX(
+    FactOrders,
+    FactOrders[Order_date] & "-" & FactOrders[Customer_id],
+    ,
+    ASC,
+    DENSE
+)
+
+2. Created column - age_segment - in DimCustomers table:
+age_segment = 
+SWITCH(
+    TRUE(), 
+    [customer_age] <= 24, "18-24", 
+    [customer_age] <= 40, "25-40",
+    [customer_age] <= 60, "40-60", 
+    "60+"
+)
+
+
+3. Created column - is_capital - in DimCustomers table:
+is_capital = 
+IF(
+    'DimCustomers'[customer_city] IN {"Vienna", "Brussels", "Prague", "Paris", "Berlin", "Rome", "Amsterdam", "Warsaw", "Lisbon", "Madrid", "Bern", "London"},
+    1,
+    0
+)
+
+
+6. Created Column - discount_value - in FacOrders table:
+discount_value = 
+[original_price] - [final_price]
+
+
+7. Created column - shipping_days - in FactOrdes table:
+shipping_days = 
+[ship_date] - [order_date]
+
+
+8. Created column - is_late_order - in FactOrders table:
+late_order = 
+IF([required_date] < [ship_date], 1, 0)
+
+
+9. Created column - is_online_order - in FactOrders table:
+is_online_order = 
+IF(RELATED('DimStores'[store_location]) = "Online", 1, 0)
+
+
+
+
+
+	Calculated Measures: 
+
+		- Totals: 
+
+1. Total Customers = 
+DISTINCTCOUNT('FactOrders'[customer_id])
+
+
+2. Total Discount = 
+SUM('FactOrders'[discount_value])
+
+
+3. Total Gross Revenue = 
+SUM('FactOrders'[original_price])
+
+
+4. Total Net Revenue = 
+SUM('FactOrders'[final_price])
+
+
+5. Total Orders = 
+DISTINCTCOUNT('FactOrders'[order_id])
+
+
+
+
+		 - Averages:
+
+1. AVG Discount per Order = 
+VAR total_discount = SUM('FactOrders'[discount_value])
+VAR total_orders = DISTINCTCOUNT('FactOrders'[order_id])
+RETURN
+total_discount / total_orders 
+
+
+2. AVG Order Value = 
+VAR total_sales =
+SUMX(
+    'FactOrders', 
+    [original_price] * [quantity]
+)
+VAR total_orders = DISTINCTCOUNT('FactOrders'[order_id])
+RETURN
+total_sales / total_orders
+
+
+3. AVG Revenue per User = 
+VAR total_sales = 
+SUMX(
+    'FactOrders', 
+    [original_price] * [quantity]
+)
+VAR total_customers = 
+DISTINCTCOUNT('FactOrders'[customer_id])
+RETURN
+total_sales / total_customers
+
+
+4. AVG Shipping Days = 
+AVERAGE('FactOrders'[shipping_days])
+
+
+5. AVG Units per Order = 
+VAR total_qty_sold = SUM('FactOrders'[quantity])
+VAR total_orders = DISTINCTCOUNT('FactOrders'[order_id])
+RETURN
+total_qty_sold / total_orders
+
+
+
+
+		 - Rates:
+
+1. Late Orders Rate = 
+VAR total_orders = 
+CALCULATE(
+    DISTINCTCOUNT('FactOrders'[order_id]),
+    'FactOrders'[is_online_order] = 1
+)
+VAR late_orders = 
+CALCULATE(
+    DISTINCTCOUNT('FactOrders'[order_id]),
+    'FactOrders'[is_online_order] = 1 && 'FactOrders'[is_late_order] = 1
+)
+RETURN
+late_orders / total_orders
+
+
+
+
+2. Online Orders Rate = 
+VAR online_orders = 
+CALCULATE(
+    DISTINCTCOUNT('FactOrders'[order_id]),
+    'FactOrders'[is_online_order] = 1
+)
+VAR total_orders = DISTINCTCOUNT('FactOrders'[order_id])
+RETURN
+online_orders / total_orders
+
+
+
+
+3. Repurchase Rate = 
+VAR total_customers = DISTINCTCOUNT('FactOrders'[customer_id])
+VAR orders_per_customer = 
+ADDCOLUMNS(
+    VALUES('FactOrders'[customer_id]),
+    "OrdersCount", CALCULATE(DISTINCTCOUNT('FactOrders'[order_id]))
+)
+VAR loyal_customers_cnt = COUNTROWS(FILTER(orders_per_customer, [OrdersCount] > 1))
+RETURN
+loyal_customers_cnt / total_customers
+
+
+
+
+4. Customer Lifetime Value :=
+VAR avg_order_value =
+DIVIDE(
+    SUM('FactOrders'[original_price]),
+    DISTINCTCOUNT('FactOrders'[order_id])
+)
+
+VAR purchase_frequency =
+DIVIDE(
+    DISTINCTCOUNT('FactOrders'[order_id]),
+    DISTINCTCOUNT('FactOrders'[customer_id])
+)
+
+VAR lifespan_table =
+    ADDCOLUMNS(
+        VALUES('FactOrders'[customer_id]),
+        "LifespanYears",
+            CALCULATE(
+                DATEDIFF(
+                    MIN('FactOrders'[order_date]),
+                    MAX('FactOrders'[order_date]),
+                    YEAR
+                )
+            )
+    )
+
+VAR avg_lifespan =
+AVERAGEX(lifespan_table, [LifespanYears])
+
+RETURN
+avg_order_value * purchase_frequency * avg_lifespan
+
+
+
+5. Gross Revenue YoY = 
+VAR CY = [Gross Revenue]
+VAR LY = [Gross Revenue LY]
+VAR _perc = DIVIDE(CY - LY, LY)
+VAR _format = FORMAT(_perc, "0.0%;0.0%")
+
+RETURN
+IF(
+    _perc > 0, 
+    UNICHAR(9650) & " " & _format,
+    UNICHAR(9660) & " " & _format
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
