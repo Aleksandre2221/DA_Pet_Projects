@@ -7,9 +7,8 @@
 - [DAX Measures](#dax-measures)
 - [Key Insights](#key-insights)
 - **Resources / Files:**
-  - **Dataset:** [Clothing_Sales_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Dataset/clothing_sales.csv)
-  - **Dashboard:** [Clothing_Sales_Dashboard](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Clothing_Sales_Dashboard.pbix)
-  - **DAX Measures:** [Clothing_Sales_DAX](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/PowerBI_Projects/Clothing_Sales_Analysis/Clothing_Sales_DAX.txt)
+  - **Dataset:** [Superstore_Sales_Dataset](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/Excel_Projects/Superstore_Analysis_P2/Dataset/US%20Superstore%20Sales%20Dataset.xls)
+  - **Dashboard:** [Superstore_Sales_Dashboard](https://github.com/Aleksandre2221/DA_Pet_Projects/blob/main/Excel_Projects/Superstore_Analysis_P2/Dashboard/Superstore_Sales_Dashboard.xlsx)
 
 ## Description
 This project explores Superstore’s sales performance using **Excel**, leveraging **Power Query**, **Power Pivot**, DAX, and interactive **Pivot Table–based dashboards**.
@@ -27,7 +26,7 @@ The dashboard delivers key insights, including:
 
 ## Screenshots
 
-- ### Data Model (Power Pivot)  
+- ### Data Model   
 <img width="1560" height="775" alt="Screenshot 2025-12-26 155452" src="https://github.com/user-attachments/assets/84d49768-b5ff-4a5a-b66e-2b055c114e01" />
 
 
@@ -49,7 +48,7 @@ The dashboard delivers key insights, including:
 
 ---
 
-## Key Features
+## Key Insights
 - Automated data loading & cleaning using **Power Query**
 - Star-schema data model built in **Power Pivot**
 - Custom KPIs calculated and metrics created using **DAX**
@@ -57,4 +56,4 @@ The dashboard delivers key insights, including:
 - Revenue, margin, discount, and other insights
 - Fully interactive, multi-page Excel dashboard for exploratory analysis
 
----
+
