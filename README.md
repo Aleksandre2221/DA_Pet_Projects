@@ -25,11 +25,12 @@ P.S. The project upload date on GitHub does not match the actual creation date. 
 | Project&nbsp;Name | Dashboard Screenshot | Description |
 | :--- | :---: | :--- |
 | **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1)** | <img width="1200" height="600" src="https://github.com/user-attachments/assets/60a86786-5726-4f82-9d60-6e87c10f9b6b" /> | This project analyzes bike sales data using tools such as Power Query, Power Pivot, Pivot Tables, and DAX. The dashboard highlights key insights and providing a clear overview of business trends. |
+| **[#2. Clothing Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1)** | <img width="1200" height="600" alt="Screenshot 2025-12-23 192945" src="https://github.com/user-attachments/assets/ef110a50-fc2f-4606-a17a-45e81c679de4" /> | This project presents an **interactive Power BI multi-page dashboard** designed to analyze **sales performance, customer behavior, and operational efficiency** across multiple stores. |
 
 
 # PowerBI 
 
 | Project&nbsp;Name | Dashboard Screenshot | Description |
 | :--- | :---: | :--- |
-| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/PowerBI_Projects/Bike_Sales_Analysis)** | <img width="1200" height="600" src="https://github.com/user-attachments/assets/33f596f7-fcb2-440e-977e-950f21e7031d" /> | This project analyzes bike sales data using Power Query, data modeling, DAX measures, and interactive visualizations. It provides insights into sales performance, product trends, customer behavior, and staff contribution. |
-
+| **[#1. Bike Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/PowerBI_Projects/Bike_Sales_Analysis)** | <img width="1200" height="1800" src="https://github.com/user-attachments/assets/33f596f7-fcb2-440e-977e-950f21e7031d" /> | This project analyzes bike sales data using Power Query, data modeling, DAX measures, and interactive visualizations. It provides insights into sales performance, product trends, customer behavior, and staff contribution. |
+| **[#2. Clothing Sales Analysis](https://github.com/Aleksandre2221/DA_Pet_Projects/tree/main/Excel_Projects/Bike_Sales_P1)** | <img width="1200" height="600" alt="Screenshot 2025-12-23 192945" src="https://github.com/user-attachments/assets/ef110a50-fc2f-4606-a17a-45e81c679de4" /> | This project presents an **interactive Power BI multi-page dashboard** designed to analyze **sales performance, customer behavior, and operational efficiency** across multiple stores. |
